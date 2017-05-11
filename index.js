@@ -43,7 +43,7 @@ module.exports = function(options) {
 
     if (options.requestOptions) {
       if (typeof options.requestOptions === 'function') {
-        opt = options.requestOptions(this.request, opt);
+        opt = options.requestOptions(this, opt);
       } else {
         Object.keys(options.requestOptions).forEach(function (option) { opt[option] = options.requestOptions[option]; });
       }
